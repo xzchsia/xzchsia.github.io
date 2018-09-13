@@ -26,12 +26,18 @@ description: "我干了什么 究竟拿了时间换了什么"
 {% endfor %}
 
 <!-- Pager -->
+<!--
 {% if paginator.total_pages > 1 %}
+-->
 <ul class="pager">
     {% if paginator.previous_page %}
-    <li class="previous">
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
-    </li>
+        <li class="previous">
+            <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
+        </li>
+    {% else %}
+        <li class="previous disabled">
+            <a>&larr; Newer Posts</a>
+        </li>
     {% endif %}
 
     <li>
@@ -42,7 +48,13 @@ description: "我干了什么 究竟拿了时间换了什么"
     <li class="next">
         <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
     </li>
+    {% else %}
+      <li class="next disabled">
+        <a>Older Posts &rarr;</a>        
+      </li>
     {% endif %}
 
 </ul>
+<!--
 {% endif %}
+-->
