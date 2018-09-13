@@ -75,18 +75,23 @@ layout: default
                     {% if page.previous.url %}
                     <li class="previous">
                         <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">
-                        Previous<br>
+                        &larr; Previous<br>
                         <span>{{page.previous.title}}</span>
                         </a>
                     </li>
+                    {% else %}
+                    <li class="previous disabled"><a>&larr; Previous</a></li>
                     {% endif %}
+
                     {% if page.next.url %}
                     <li class="next">
                         <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">
-                        Next<br>
+                        Next &rarr;<br>
                         <span>{{page.next.title}}</span>
                         </a>
                     </li>
+                    {% else %}
+                    <li class="next disabled"><a>Next &rarr;</a>
                     {% endif %}
                 </ul>
 
