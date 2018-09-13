@@ -6,7 +6,6 @@ date:       2018-08-30
 author:     "Hsia"
 header-img: ""
 catalog: true
-keyword: MySQL
 tags:
     - 技术
     - MySQL 

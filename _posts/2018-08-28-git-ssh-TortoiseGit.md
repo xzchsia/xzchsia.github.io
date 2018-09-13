@@ -6,7 +6,6 @@ date:       2018-08-28
 author:     "Hsia"
 header-img: ""
 catalog: true
-keyword: git
 tags:
     - 工具
     - git 

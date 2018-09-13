@@ -6,7 +6,6 @@ date:       2018-08-16
 author:     "Hsia"
 header-img: ""
 catalog: true
-keyword: Java
 tags:
     - 技术
     - Java 

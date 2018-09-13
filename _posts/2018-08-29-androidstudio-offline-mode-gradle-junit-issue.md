@@ -6,7 +6,6 @@ date:       2018-08-29 17:00:00
 author:     "Hsia"
 header-img: ""
 catalog: true
-keyword: Android
 tags:
     - 技术
     - Android 
