@@ -2,7 +2,7 @@
 layout: page
 title: "Archive"
 description: "看到了吗？没有？继续往下翻吧。"
-header-img: "img/post-bg-re-vs-ng2.jpg"
+header-img: "img/home-bg-archive.jpg"
 ---
 
 
