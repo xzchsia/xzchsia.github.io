@@ -90,4 +90,12 @@ service-worker: true
 
 
 # Friends
-
+[
+  {
+        title: "Hux-模板来源",
+        href: "https://github.com/Huxpro/huxpro.github.io"
+  },{
+        title: "BruceZhaoR",
+        href: "https://github.com/BruceZhaoR/brucezhaor.github.io"
+  }
+]
