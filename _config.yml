@@ -90,7 +90,7 @@ service-worker: true
 
 
 # Friends
-[
+friends: [
   {
         title: "Hux-模板来源",
         href: "https://github.com/Huxpro/huxpro.github.io"
