@@ -13,9 +13,12 @@ header-img: "img/home-bg-archive.jpg"
     {% assign year = y %}
     <li class="listing-seperator">{{ y }}</li>
   {% endif %}
+  <ul>
   <li class="listing-item">
     <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+    &raquo;
     <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
   </li>
+</ul>
 {% endfor %}
 </ul>
