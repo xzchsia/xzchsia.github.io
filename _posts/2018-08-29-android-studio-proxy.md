@@ -6,7 +6,7 @@ date:       2018-08-29
 author:     "Hsia"
 header-img: ""
 catalog: true
-keywords: Android
+keyword: Android
 tags:
     - 工具
     - Android 
