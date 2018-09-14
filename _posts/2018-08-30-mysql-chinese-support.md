@@ -121,7 +121,7 @@ tags:
 [myini]:/img/in-post/mysql-support-chinese/myini.png 
 [myini-modify]:/img/in-post/mysql-support-chinese/myini-modify.png  
 [service-cmd]:/img/in-post/mysql-support-chinese/service-cmd.png  
-[character-before]:/img/in-post/master/mysql-support-chinese/character-before.png
+[character-before]:/img/in-post/mysql-support-chinese/character-before.png
 [character-after]:/img/in-post/mysql-support-chinese/character-after.png
 [error-info]:/img/in-post/mysql-support-chinese/error-info.png
 [show-table-character]:/img/in-post/mysql-support-chinese/show-table-character.png
