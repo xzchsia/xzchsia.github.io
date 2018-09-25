@@ -501,7 +501,12 @@ class SyncThread implements Runnable {
 
 ## 参考资料：   
 
-1. http://blog.csdn.net/luoweifu/article/details/46613015
-2. http://blog.csdn.net/chenguang79/article/details/677720   
-3. http://developer.51cto.com/art/200906/132354.htm  
+1. [http://blog.csdn.net/luoweifu/article/details/46613015][ref1]
+2. [http://blog.csdn.net/chenguang79/article/details/677720][ref2]   
+3. [http://developer.51cto.com/art/200906/132354.htm][ref3]  
+
+
+[ref1]:http://blog.csdn.net/luoweifu/article/details/46613015
+[ref2]:http://blog.csdn.net/chenguang79/article/details/677720
+[ref3]:http://developer.51cto.com/art/200906/132354.htm
 
