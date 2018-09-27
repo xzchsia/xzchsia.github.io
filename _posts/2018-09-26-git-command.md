@@ -63,10 +63,25 @@ git push origin v3.1.0-android     # 操作成功
 
 ![git-result][git-result]
 
+7 . 删除本地tag
+```bash
+git tag -d 标签名  
+
+例如：git tag -d v3.1.0
+```
+
+8 . 删除远程标签tag  
+```bash
+git push origin :refs/tags/标签名  
+
+例如：git push origin :refs/tags/v3.1.0
+```
+![git-delete-tag][git-delete-tag]
 
 
 [git-log]:/img/in-post/git-command/1-git-log-show.png
 [git-create-tag]:/img/in-post/git-command/2-git-create-tag.png
 [git-push]:/img/in-post/git-command/3-git-push-tags.png
 [git-result]:/img/in-post/git-command/4-git-result-tags.png
+[git-delete-tag]:/img/in-post/git-command/5-git-delete-tag.png
 
