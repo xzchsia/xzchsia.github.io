@@ -11,14 +11,14 @@ tags:
     - Android 
 ---
 
-### AndroidDevTools  
+## AndroidDevTools  
 
 AndroidDevTools 是国内资源集合镜像站点   
 该站点主要是收集整理Android开发所需的Android SDK、开发中用到的工具、Android开发教程、Android设计规范，免费的设计素材等。  
 [http://www.androiddevtools.cn/][android-proxyweb]
 
 
-### Android SDK proxy
+## Android SDK proxy
 
 1 . 启动 Android SDK Manager ，打开主界面，依次选择「Tools」、「Options...」，弹出『Android SDK Manager - Settings』窗口；
 
@@ -30,4 +30,24 @@ AndroidDevTools 是国内资源集合镜像站点
 3 . 然后依次选择「Packages」、「Reload」。即可使用代理更新了。
 
 
+## Android SDK 更新以及需要安装的package
+
+根据官方文档的描述
+- SDK Tools 必须
+- SDK Platform-tools 必须
+- SDK Platform必须至少安装一个版本
+- System Image建议安装
+- Android Support建议安装
+- SDK Samples建议安装
+
+![android-sdk][android-sdk]
+
+
+## 参考资料
+
+[Android SDk Manager里面到底哪些东西是必须下载的？][android-sdk-package]
+
 [android-proxyweb]:http://www.androiddevtools.cn/
+[android-sdk]:/img/in-post/android-sdk.png
+[android-sdk-package]:https://blog.csdn.net/kuangshow0227/article/details/73195037?locationNum=12&fps=1
+
