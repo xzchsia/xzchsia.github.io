@@ -13,7 +13,8 @@ tags:
 
 ## AndroidDevTools  
 
-AndroidDevTools 是国内资源集合镜像站点   
+AndroidDevTools 是国内资源集合镜像站点  
+![androiddevtools][androiddevtools]
 该站点主要是收集整理Android开发所需的Android SDK、开发中用到的工具、Android开发教程、Android设计规范，免费的设计素材等。  
 [http://www.androiddevtools.cn/][android-proxyweb]
 
@@ -63,6 +64,8 @@ AndroidDevTools 是国内资源集合镜像站点
 
 [Android SDk Manager里面到底哪些东西是必须下载的？][android-sdk-package]
 
+
+[androiddevtools]:/img/in-post/android/android-devtools-cn.png
 [android-proxyweb]:http://www.androiddevtools.cn/
 [android-sdk]:/img/in-post/android-sdk.png
 [android-sdk-package]:https://blog.csdn.net/kuangshow0227/article/details/73195037
