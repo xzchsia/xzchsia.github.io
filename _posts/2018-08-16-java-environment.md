@@ -41,3 +41,5 @@ JAVA环境变量JAVA_HOME、CLASSPATH、PATH设置详解
 
 > CLASSPATH=.;%JAVA_HOME%\lib;%JAVA_HOME%\lib\tools.jar  
 
+**注意：**  1.5版本以上的JDK不用配置CLASSPATH了，会自动找到的。
+
