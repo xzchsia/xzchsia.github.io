@@ -962,5 +962,6 @@ class MyApp extends StatelessWidget {
 
 ![](http://o6p4e1uhv.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-12-22%20%E4%B8%8B%E5%8D%883.34.41.png)
 
-参考文章github：[https://github.com/flutter-dev/internationalizing]
-思维导图地址：[https://my.mindnode.com/7u6RudyGs5bqzX1WrxY5XtZZqUDBzqvL2NioVbrr]
+
+[参考文章github](https://github.com/flutter-dev/internationalizing)  
+[思维导图地址](https://my.mindnode.com/7u6RudyGs5bqzX1WrxY5XtZZqUDBzqvL2NioVbrr)  
