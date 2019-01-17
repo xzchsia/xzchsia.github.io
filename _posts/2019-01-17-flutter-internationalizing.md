@@ -1,10 +1,10 @@
 ---
 layout:     post
-title:      "【转】Flutter 中的国际化"
-subtitle:   "img/post-bg-flutter.png"
+title:      "Flutter中的国际化"
+subtitle:   ""
 date:       2019-01-17 
 author:     "Hsia"
-header-img: ""
+header-img: "img/post-bg-flutter.png"
 catalog: true
 tags:
     - 技术
