@@ -31,7 +31,7 @@ Flutter 官方鼓励我们在写 Flutter 应用的时候直接从 MaterialApp �
 
 通常我们新建的 Flutter 应用是默认不支持多语言的，即使用户在中文环境下，显示的文字仍然是英文，比如下图所示的日期选择对话框：
 
-![](http://o6p4e1uhv.bkt.clouddn.com/device-2017-12-21-214051.png)
+![][date-demo]  
 
 那么怎么样将系统的这些组件国际化呢？首先需要在 pubspec.yaml 中添加如下依赖：
 
@@ -379,7 +379,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
 运行！！
 
-![](http://o6p4e1uhv.bkt.clouddn.com/device-2017-12-21-231417.png)
+![][error-demo]
 
 😂😂😂 
 
@@ -542,9 +542,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
 再运行：
 
-![](http://o6p4e1uhv.bkt.clouddn.com/device-2017-12-22-001905.png)
+![][success-demo]
 
-![](http://o6p4e1uhv.bkt.clouddn.com/device-2017-12-22-002133.png)
 
 完美。
 
@@ -638,11 +637,10 @@ Widget build(BuildContext context) {
       child: result,
     );
   }
-```
+```  
 
-首先在 3 处可以看到 _localizationsDelegates 被赋值给了 WidgetsApp 的 localizationsDelegates 参数。在看 1、2、4 处分别又在原有的 Widget 上做了包裹，此时的 widget 树层次如下图：
 
-![](http://o6p4e1uhv.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-12-22%20%E4%B8%8A%E5%8D%8810.45.47.png)
+首先在 3 处可以看到 _localizationsDelegates 被赋值给了 WidgetsApp 的 localizationsDelegates 参数。在看 1、2、4 处分别又在原有的 Widget 上做了包裹。
 
 接着进入 WidgetApp ，它也是个 StatefulWidget，直接看它的 State 类 `_WidgetsAppState`的 build 方法：
 
@@ -692,11 +690,7 @@ Widget build(BuildContext context) {
   }
 ```
 
-在 4 处终于见到了我们熟悉的身影 `Localizatins`。_localizationsDelegates 也是被传递进了 Localizations。此时的 widget 树层次如下：
-
-
-
-![](http://o6p4e1uhv.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-12-22%20%E4%B8%8A%E5%8D%8810.55.52.png)
+在 4 处终于见到了我们熟悉的身影 `Localizatins`。_localizationsDelegates 也是被传递进了 Localizations。
 
 层次如此之多，但我们关心只是其中的 Localizations，所以抛开其他不看，进入 Localizations 看看。
 
@@ -855,14 +849,11 @@ static T of<T>(BuildContext context, Type type) {
   }
 ```
 到这差不多就结束了，这里根据 type 从 \_typeToResources 中取出了 DemoLocalizations 的实例。
-最后再把完整的 widget 树的层次展示一下：
-
-![](http://o6p4e1uhv.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-12-22%20%E4%B8%8B%E5%8D%882.29.45.png)
 
 
 ## 四、简单的 App 内语言切换
 
-下面我见到介绍一下如何在不切换手机系统的语言的情况下来切换 Flutter 应用内的语言。主要用到的是 Localizations 的 override 方法。具体不多介绍，看下面我自定义的 StatefulWidget 类 FreeLocalizations 和它的 State 类 _FreeLocalizations：
+下面我见到介绍一下如何在不切换手机系统的语言的情况下来切换 Flutter 应用内的语言。主要用到的是 Localizations 的 override 方法。具体不多介绍，看下面我自定义的 StatefulWidget 类 FreeLocalizations 和它的 State 类 _FreeLocalizations：  
 
 ```dart
 class FreeLocalizations extends StatefulWidget{
@@ -952,16 +943,21 @@ class MyApp extends StatelessWidget {
   }
 ```
 
-效果如下：
-
-![](http://o6p4e1uhv.bkt.clouddn.com/localizatiion_free.gif)
 
 这一小节我讲的比较简单，但如果你看明白了二、三两节，那弄明白这里多语言是怎么切换的应该是比较容易的。
 
 ## 五、总结
 
-![](http://o6p4e1uhv.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-12-22%20%E4%B8%8B%E5%8D%883.34.41.png)
+![][internationalizing-mind]
 
 
 [参考文章github](https://github.com/flutter-dev/internationalizing)  
 [思维导图地址](https://my.mindnode.com/7u6RudyGs5bqzX1WrxY5XtZZqUDBzqvL2NioVbrr)  
+
+
+
+[date-demo]:/img/in-post/flutter-internationalizing/date-demo.png
+[error-demo]:/img/in-post/flutter-internationalizing/error-demo.png
+[success-demo]:/img/in-post/flutter-internationalizing/success-demo.png
+[internationalizing-mind]:/img/in-post/flutter-internationalizing/internationalizing-mind.png
+
