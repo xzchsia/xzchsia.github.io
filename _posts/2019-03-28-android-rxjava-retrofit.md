@@ -26,8 +26,7 @@ implementation 'io.reactivex.rxjava2:rxjava:2.2.1'
 implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'  
 implementation 'com.squareup.retrofit2:retrofit:2.4.0'  
 implementation 'com.squareup.retrofit2:converter-gson:2.4.0'  
-implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'  
-
+implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'    
 ```
 这些依赖是Rxjava2和Retrofit2结合需要的依赖。  
 
@@ -37,8 +36,7 @@ implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
 Retrofit retrofit = new Retrofit.Builder().baseUrl("www.xxxxxxx.com")
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-                .build();
-
+                .build();  
 ```
 
 然后我们还需要修改RetrofitService 中的代码：  
@@ -48,7 +46,7 @@ public interface RetrofitService {
     @GET("book/search")
     Observable<Book> getSearchBook(@Query("q") String name,
                                     @Query("tag") String tag, @Query("start") int start,
-                                    @Query("count") int count);
+                                    @Query("count") int count);  
 ```
 
 可以看到，在原来的RetrofitService 中我们把getSearchBook方法返回的类型Call改为了Observable，也就是被观察者。其他都没变。然后就是创建RetrofitService 实体类：
@@ -100,7 +98,6 @@ Observable<Book> observable =  service.getSearchBook("Hello", null, 0, 1);
             }
         });
     }  
-
 ```
 
 在上面中我们可以看到，事件的消费在Android主线程，这样我们就引入了RxAndroid，RxAndroid其实就是对RxJava的扩展。比如上面这个Android主线程在RxJava中就没有，因此要使用的话就必须得引用RxAndroid。  
@@ -111,6 +108,5 @@ Observable<Book> observable =  service.getSearchBook("Hello", null, 0, 1);
 1. [MVP+Retrofit+RxJava+Dagger框架](https://blog.csdn.net/jinhuoxingkong/article/details/76260032)  
 2. [网络加载框架 - Retrofit](https://www.jianshu.com/p/0fda3132cf98)  
 3. [最适合android的MVP模式](https://www.jianshu.com/p/bbb3b77d47eb)  
-4. [这可能是最好的RxJava 2.x 教程（完结版）]https://www.jianshu.com/p/0cd258eecf60)  
-
+4. [这可能是最好的RxJava 2.x 教程（完结版）](https://www.jianshu.com/p/0cd258eecf60)  
 
