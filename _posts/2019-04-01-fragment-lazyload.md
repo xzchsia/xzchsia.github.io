@@ -14,10 +14,13 @@ tags:
 ---  
 
 ## 一、简介  
-     玩过微信的都知道，微信用的是懒加载的模式，之所以使用懒加载是因为：当使用viewpager+adapter作为应用大的布局时，viewpager会通过setOffscreenPageLimit来设置预加载的项目，不设置setOffscreenPageLimit，则默认为1（设置0无效，可以查看该方法源码知道），也就是当我们打开应用看到的时候fragmentOne时，实际上其他fragment（例如fragmentSecond）也进行了加载，只不过没有显示出来罢了，但是这样就造成了不必要的资源浪费（例如，fragmentSecond没有显示，但是却进行了大量的网络加载操作）。
-在此先要说下一下几个方法：
-1.ViewPager中的setOffscreenPageLimit方法，设置预加载的页面个数，参数不能小于1因为默认最小就是1。作用是：可以让Fragment视图不会被销毁。
-2.Fragment中的setUserVisibleHint方法，当参数为true时对用户可见，当为false时对用户不可见（这是懒加载的关键所在）  
+     玩过微信的都知道，微信用的是懒加载的模式，之所以使用懒加载是因为：当使用viewpager+adapter作为应用大的布局时，viewpager会通过setOffscreenPageLimit来设置预加载的项目，不设置setOffscreenPageLimit，则默认为1（设置0无效，可以查看该方法源码知道），也就是当我们打开应用看到的时候fragmentOne时，实际上其他fragment（例如fragmentSecond）也进行了加载，只不过没有显示出来罢了，但是这样就造成了不必要的资源浪费（例如，fragmentSecond没有显示，但是却进行了大量的网络加载操作）。  
+
+在此先要说下一下几个方法：  
+
+1.ViewPager中的setOffscreenPageLimit方法，设置预加载的页面个数，参数不能小于1因为默认最小就是1。作用是：可以让Fragment视图不会被销毁。  
+
+2.Fragment中的setUserVisibleHint方法，当参数为true时对用户可见，当为false时对用户不可见（这是懒加载的关键所在）    
 
 
 ## 二、使用步骤  
