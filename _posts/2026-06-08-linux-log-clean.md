@@ -16,12 +16,12 @@ tags:
 Linux系统日志清理指南：安全清理`/var/log/journal`，释放磁盘空间，在Linux系统中，日志是排查故障的重要依据，但`/var/log/journal`目录下的systemd日志（系统日志核心存储位置）却可能悄悄“膨胀”——长期不清理的日志文件，轻则占用数GB磁盘空间，重则导致`/var`分区满溢，引发系统卡顿甚至服务崩溃。今天就带大家掌握“安全清理`/var/log/journal`日志”的方法，既避免误删关键日志，又能高效释放空间，最后还会教大家配置自动日志管。  
 
 
-# 一、先搞懂：/var/log/journal是什么？为什么要清理？  
+<h2>一、先搞懂：/var/log/journal是什么？为什么要清理？  </h2>
 
 在开始操作前，我们先明确两个核心问题，避免盲目清理：  
 
-1. 什么是/var/log/journal？  
-`/var/log/journal`是systemd（大多数现代Linux发行版的初始化系统，如Ubuntu、CentOS、Debian）默认的日志存储目录，里面存放的是<strong>二进制格式的系统日志</strong>，包含：</p>
+<h3>1. 什么是/var/log/journal？  </h3>
+`/var/log/journal`是systemd（大多数现代Linux发行版的初始化系统，如Ubuntu、CentOS、Debian）默认的日志存储目录，里面存放的是<strong>二进制格式的系统日志</strong>，包含：
 <ul>
 <li>系统启动过程日志（如内核加载、服务启动）；</li>
 <li>应用运行日志（如Nginx、MySQL的错误信息）；</li>
